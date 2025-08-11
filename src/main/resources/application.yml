@@ -5,7 +5,7 @@ spring:
   data:
     mongodb:
       host: ${MONGO_HOST}
-      port: ${MONGO_PART}
+      port: ${MONGO_PORT}
       database: ${MONGO_DATABASE}
 
     redis:
@@ -14,3 +14,5 @@ spring:
 
 cache:
   ttl: ${CACHE_TTL}
+server:
+  port: ${SERVER_PORT}
