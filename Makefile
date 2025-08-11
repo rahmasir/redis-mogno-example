@@ -2,10 +2,8 @@
 
 ifeq ($(OS), Windows_NT)
     MVNW = .\mvnw
-    JAR_PATH = target\shop-inventory-0.0.1-SNAPSHOT.jar
 else
     MVNW = ./mvnw
-	JAR_PATH = target/shop-inventory-0.0.1-SNAPSHOT.jar
 endif
 
 # Build the Spring Boot application
@@ -20,11 +18,11 @@ up:
 down:
 	docker-compose down
 
-# Run the Spring Boot application
+# Run the Spring Boot application [just for linux]
 run:
-	java -jar $(JAR_PATH)
+	java -jar target/shop-inventory-0.0.1-SNAPSHOT.jar
 
-# A command to build and run everything
+# A command to build and run everything [just for linux]
 start: build up run
 
 # A command to stop everything
